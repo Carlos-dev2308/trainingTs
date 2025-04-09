@@ -7,4 +7,4 @@ const lista=[
 
 
 const getList= lista.filter((ropa)=> ropa.categoria==="ropa").map((ropa)=> ropa.precio+(ropa.precio*0.10)).reduce((acc,obj)=>acc+obj);
-console.log(getList);
+console.log("Precio total: ",getList);
