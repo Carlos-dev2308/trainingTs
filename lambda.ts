@@ -22,5 +22,25 @@ const lista:Producto[] =[
 let stock=(lista.sort((a,b)=>a[1]-b[1]).filter(producto=>producto[2]==='en stock').map(producto=>producto[0]+" "+producto[1]+'$'));
 console.log(stock);
 
+enum tamanoCafe{
+    'pequeno',
+    'mediano',
+    'grande'
+}
+
+interface Cafe{
+    tipo:string,
+    tamano:tamanoCafe,
+    precio:number
+}
+
+const listaCafe:Cafe[]=[
+    {tipo:"mocha",tamano:0,precio:50},
+    {tipo:"cappuchino",tamano:1,precio:60},
+    {tipo:"americano",tamano:2,precio:70}
+]
+
+const medianos=listaCafe.sort((a,b)=>a.precio-b.precio).filter(cafe=>cafe.tamano===1).map(cafe=>cafe.tipo+" "+cafe.precio+'$');+
+console.log(medianos);
 
 
